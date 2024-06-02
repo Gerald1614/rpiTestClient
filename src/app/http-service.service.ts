@@ -7,13 +7,18 @@ import { HttpClient } from '@angular/common/http';
 export class HttpServiceService {
   private url = "http://192.168.2.118:8080/"
     
- 
-  toggleLed(color:string) {
+ getConfluentStock() {
+  return this.http.get(this.url+"stock");
+}
+  toggleLed(color:string, action:string) {
     console.log(this.url+color+"/start")
-    // this.http.post(this.url+color+"/start", );
-    this.http.get(this.url+color+"/start", ).subscribe(config => {
-      console.log('Updated config:', config);
+    this.http.get(this.url+color+"/"+action, ).subscribe(result => {
+      console.log(result);
     });
+  }
+
+  chenillard(duration:number) {
+    return this.http.get(this.url+"chenille/"+duration)
   }
 
   constructor(private http: HttpClient) {}

@@ -1,5 +1,36 @@
 <p>leds works!</p>
+<div class="row">
+    <button mat-raised-button [disabled]="isEnabled" (click)="chenillard()" color="warn">Chenillard <mat-spinner *ngIf="isEnabled" diameter="20"></mat-spinner></button>
+   
+    <mat-slider min="1" max="10" step="1" showTickMarks discrete>
+        <input matSliderThumb [(ngModel)]="slidervalue">
+      </mat-slider>
+<div class="column">
+    <mat-button-toggle-group 
+    name="leds" 
+    aria-label="Leds" 
+    (change)="onToggleGroupChange($event.source)"
+    multiple>
+    <mat-button-toggle value="green">Green</mat-button-toggle>
+    <mat-button-toggle value="blue">Blue</mat-button-toggle>
+    <mat-button-toggle value="red">Red</mat-button-toggle>
+  </mat-button-toggle-group>
 
-<button class="button" (click)="toggle('green')">Green</button>
-<button class="button button2" (click)="toggle('blue')">Blue</button>
-<button class="button button3" (click)="toggle('red')">Red</button>
+</div>
+
+<div class="column" style="background-color:lightgray">
+    <div class="Led-Cont" >
+        <span class="dot" id="greenLed"></span>
+        <p>Green led</p>
+    </div>
+    <div class="Led-Cont">
+        <span class="dot" id="blueLed"></span>
+        <p>Blue led</p>
+    </div>
+    <div class="Led-Cont">
+        <span class="dot" id="redLed"></span>
+        <p>Red led</p>
+    </div>
+</div>
+
+</div>

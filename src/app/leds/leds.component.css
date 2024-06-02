@@ -1,15 +1,44 @@
-.button {
-    background-color: #04AA6D; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+.mat-button-toggle {
+  background-color: darkslateblue;
+}
+.mat-mdc-progress-spinner {
+  display: inline-flex;
+}
 
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */
+.dot {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 40%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.Led-Cont {
+    width: 33%;
+    padding: 15px;
+    display: inline-block;
+    justify-content: space-between;
+}
+#greenLed {
+  background-color:green;
+  opacity:20%
+}
+#blueLed {
+  background-color:blue;
+  opacity:20%
+}
+#redLed {
+  background-color:red;
+  opacity:20%
+}

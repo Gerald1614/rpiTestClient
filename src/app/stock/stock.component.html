@@ -1,1 +1,21 @@
-<p>stock works!</p>
+
+<div class="row">
+    <p>Confluent stock evolution</p>
+    <a>{{ stockConfluent.symbol}}</a>
+    <a> {{stockConfluent.from}}</a>
+    <div class="column">
+        <button mat-raised-button (click)="getStock()" color="warn">Confluent stock request</button>
+
+    </div>
+    <div class="column">
+
+<p *ngIf="stockConfluent.status=='ok'">
+    <a>opened at ${{ stockConfluent.open}}</a>
+    <a> closed at ${{stockConfluent.close}}</a>
+</p>
+
+    </div>
+    </div>
+<div>
+
+</div>
